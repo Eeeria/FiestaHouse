@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Menu | Fiesta House</title>
+    <link rel="icon" type="images/png" href="images/favicon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="body">
+<!--header-->    
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/fiesta house.png" width="200px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/bag.jpg" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div> 
+    </div>
+</div>
+
+<!--single product details-->
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="images/P22.jpg" width="358px" height="358px">
+        </div>
+        <div class="col-2">
+            <p> <a href="menu.html">Menu</a> / Filipino Dishes</p>
+            <h1>P22 - Pork Giniling</h1>
+            <h4>P129.00</h4>
+            <input type="number" value="1">
+            <button class="btn" onclick="openPopup()">Add to Cart</button>
+            <div class="popup" id="popup">
+                <img src="images/bag.jpg">
+                <br>
+                <br>
+                <h2>P22 added to your cart.</h2>
+                <br>
+                <button type="button" onclick="closePopup()">OK</button>
+            </div>
+            <script>
+                let popup = document.getElementById("popup");
+                function openPopup(){
+                    popup.classList.add("open-popup")
+                }
+                function closePopup(){
+                    popup.classList.remove("open-popup")
+                }
+            </script>
+            <h3>Details</h3>
+            <p>Ground pork stewed in tomato sauce with carrots and potatoes</p>
+        </div>
+    </div>
+</div>
+
+<!--title-->
+<div class="small-container">
+    <div class="row row-2">
+        <h3>You may also like...</h3>
+        <p><a href="menu.html">View More</a></p>
+    </div>
+</div>
+
+<!--other products-->
+<div class="small-container">
+    <div class="row">
+        <div class="col-4">
+            <p><a href="P21.html">P21 - Bicol Express </a></p>
+            <p><a href="P22.html">P22 - Pork Giniling </a></p>
+            <p><a href="P23.html">P23 - Tuna Sarciado </a></p>
+            <p><a href="P24.html">P24 - Grilled Bangus </a></p>
+        </div>
+        <div class="col-4">
+            <p><a href="S1.html">S1 - Halo-halo </a></p>          
+            <p><a href="S2.html">S2 - Mais Con Yelo </a></p>
+            <p><a href="S3.html">S3 - Taho </a></p>
+            <p><a href="S4.html">S4 - Mango Sago </a></p>
+        </div>
+        <div class="col-4">
+            <p><a href="S5.html">S5 - Leche Flan </a></p>
+            <p><a href="S6.html">S6 - Biko </a></p>
+            <p><a href="S7.html">S7 - Maja Blanca </a></p>
+            <p><a href="S8.html">S8 - Kutsinta </a></p>
+        </div>
+        <div class="col-4">
+            <p><a href="S9.html">S9 - Bibingka Cake </a></p>
+            <p><a href="S10.html">S10 - Cassava Cake </a></p>
+            <p><a href="S11.html">S11 - Buko Salad </a></p>
+            <p><a href="S12.html">S12 - Turon </a></p>
+        </div>
+    </div>
+</div>
+</div>
+<!-------footer------>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/playstore.PNG">
+                    <img src="images/appstore.PNG">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/fhblack.PNG">
+                <p>Our purpose is to make sure that we give you the best service and 
+                    the Filipino food of the best quality. We also work towards providing 
+                    the best customer and website service to all of our customers, making sure that 
+                    everybody leaves with healthy stomachs and happy hearts. 
+                    </p>
+            </div>
+            <div class="footer-col-3">
+                <ul>
+                <h3>Useful Links</h3>
+                <li><a href="promo.html">Promos</a></li>
+                <li><a href="contact.html">Customer Care</a></li>
+                <li><a href="tc.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <ul>
+                <h3>Stay Connected</h3>
+                <li><a href="https://facebook.com/fiestahouseph">Facebook</a></li>
+                <li><a href="https://twitter.com/fiestahouseph">Twitter</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="https://youtube.com/channel/UC37AGb8ZIBe5YhbGHy-Cwiw">YouTube</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Fiesta House</p>
+        </div>
+    </div>
+</div>
+<!----------js for toggle menu-------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+</body>
+</html>

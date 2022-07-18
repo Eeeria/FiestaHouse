@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Menu | Fiesta House</title>
+    <link rel="icon" type="images/png" href="images/favicon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-------- header -------->    
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/fiesta house.png" width="200px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/bag.jpg" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div> 
+    </div>
+</div>
+
+<!--single promo details-->
+<div class="small-container single-promo">
+    <div class="row">
+        <div class="col-2">
+            <img src="images/promo4.PNG" class="center">
+        </div>
+        <div class="col-2">
+            <p> <a href="promo.html">Promo</a> / Loyalty Program</p>
+            <h2>FH Loyalty Program Promo</h2>
+        <div class="center">
+           
+            <p>Whether you visit once a month or every day, we're 
+            always glad to see you. And we want you to enjoy rewards<br></p>
+            <p><br> Just pay with a registered FH cards or app, and 
+                you'll collect 1 star with every P25 spent.<br></p>
+            <p><br> As a member, you'll collect stars on almost everything 
+                you buy and those stars add up to (some really delicious) 
+                rewards.<br></p>
+            <p><br> Get a FREE Taho / Halo-halo / Mango Sago with every 
+                100 stars you collect!<br></p>
+            <p><br>More rewards will be available soon.</p>
+            <a href="menu.html" class="btn">Order Now</a>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+<!-----title------>
+<div class="small-container">
+    <div class="row row-2">
+        <h3>Other FH Promos</h3>
+        <p><a href="promo.html">View More</a></p>
+    </div>
+</div>
+<div class="small-container">
+    <div class="row">
+        <div class="col-4">
+            <a href="promo1.html"><img src="images/promo1.PNG"></a>
+            <h4>Choose Your Welcome Gift</h4>
+        </div>
+        <div class="col-4">
+            <a href="promo2.html"><img src="images/promo2.PNG"></a>
+            <h4>Get a FREE Pancit Canton</h4>
+        </div>
+        <div class="col-4">
+            <a href="promo3.html"><img src="images/promo3.PNG"></a>
+            <h4>FH-amily Deal Promo</h4>
+        </div>
+        <div class="col-4">
+            <a href="promo4.html"><img src="images/promo4.PNG"></a>
+            <h4>FH Loyalty Program Promo</h4>
+        </div>
+    </div>
+</div>
+<!-------footer------>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/playstore.PNG">
+                    <img src="images/appstore.PNG">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/fhblack.PNG">
+                <p>Our purpose is to make sure that we give you the best service and 
+                    the Filipino food of the best quality. We also work towards providing 
+                    the best customer and website service to all of our customers, making sure that 
+                    everybody leaves with healthy stomachs and happy hearts. 
+                    </p>
+            </div>
+            <div class="footer-col-3">
+                <ul>
+                <h3>Useful Links</h3>
+                <li><a href="promo.html">Promos</a></li>
+                <li><a href="contact.html">Customer Care</a></li>
+                <li><a href="tc.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <ul>
+                <h3>Stay Connected</h3>
+                <li><a href="https://facebook.com/fiestahouseph">Facebook</a></li>
+                <li><a href="https://twitter.com/fiestahouseph">Twitter</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="https://youtube.com/channel/UC37AGb8ZIBe5YhbGHy-Cwiw">YouTube</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Fiesta House</p>
+        </div>
+    </div>
+</div>
+<!----------js for toggle menu-------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+</body>
+</html>
