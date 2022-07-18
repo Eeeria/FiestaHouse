@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="icon" type="images/png" href="images/favicon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="tracker.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="dropdown-item">
+		<div class="imgBox" onclick="myFunction()">
+			<img src = "images/menu.png" class="menu-icon">
+		</div>
+		<div class="dropdown-content">
+			<div class="content">
+				<div class="name"><b>HI! Ryujin Perez</b></div>
+			</div>
+			<ul class="links">
+				<li><a href="#"><a href="login_index.html"><button type="button" onclick="closePopup()">Home</button></a></a></li>
+				<div class="divider"></div>
+				<li><a href="#"><a href="login_menu.html"><button type="button" onclick="closePopup()">Menu</button></a></a></li>
+				<div class="divider"></div>
+				<li><a href="#"><a href="login_tracker.html"><button type="button" onclick="closePopup()">Track Order</button></a></a></li>
+				<div class="divider"></div>
+				<li><a href="#"><a href="login_contact.html"><button type="button" onclick="closePopup()">Contact Us</button></a></a></li>
+				<div class="divider"></div>
+				<li><a href="#"><a href="account.html"><button type="button" onclick="closePopup()">Log-Out</button></a></a></li>
+			</ul>
+		</div>
+    </div>
+    <script>
+		function myFunction() {
+			var dropdownContent = document.querySelector('.dropdown-content');
+			dropdownContent.classList.toggle('dropdown-toggle');
+		}
+	</script>
+    <div class="card">
+        <div class="title">Purchase Receipt</div>
+        <div class="info">
+            <div class="row">
+                <div class="col-7">
+                    <span id="heading">Date</span>
+                    <span id="details">July 17, 2022</span>
+                </div>
+                <div class="col-5 pull-right">
+                    <u><span id="heading">Order No.</span>
+                    <span id="details">0021</span></u>
+                    <br>
+                </div>
+            </div>      
+        </div>      
+        <div class="pricing">
+            <div class="row">
+                <div class="col-9">
+                    <span id="name">Subtotal</span>  
+                </div>
+                <div class="col-3">
+                    <span id="price">P885.00</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-9">
+                    <span id="name">Shipping</span>
+                </div>
+                <div class="col-3">
+                    <span id="price">P50.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <div class="row">
+                <div class="col-9"></div>
+                <div class="col-3">P935.00</div>
+            </div>
+        </div>
+        <div class="tracking">
+            <div class="title">Tracking Order</div>
+        </div>
+        <div class="progress-track">
+            <ul id="progressbar">
+                <li class="step0 active " id="step1">Order Received</li>
+                <li class="step0 text-muted text-right" id="step2">In the Kitchen</li>
+                <li class="step0 text-muted text-right" id="step3">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; On The Way</li>
+                <li class="step0 text-muted text-right" id="step4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Delivered</li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="row">
+                <div class="col-2"><img class="img-fluid" src="images/fhblack.PNG"></div>
+                <div class="col-10">Need any help? &nbsp;<a href="contact.html">Contact us</a></div>
+            </div>
+        </div>
+        <div class="container">
+        <button class="btn" onclick="openPopup()">ORDER RECEIVED</button>
+            <div class="popup" id="popup">
+                <img src="images/fhblack.PNG">
+                <br>
+                <h2>Thank you for your order. Enjoy!</h2>
+                <br>
+                <p>If you are happy with your purchase, we would be very grateful for your review!</p>
+                <br>
+                <a href="login_index.html"><button type="button" onclick="closePopup()">BACK TO HOME</button></a>
+            </div>
+            <script>
+                let popup = document.getElementById("popup");
+                function openPopup(){
+                    popup.classList.add("open-popup")
+                }
+                function closePopup(){
+                    popup.classList.remove("open-popup")
+                }
+            </script>
+        </div>
+    </div>
+</body>  
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>About Us | Fiesta House</title>
+    <link rel="icon" type="images/png" href="images/favicon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!--Header-->   
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/fiesta house.png" width="200px"></a>
+            </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+            <a href="cart.html"><img src="images/bag.jpg" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>About Fiesta House</h1>
+                <p>Fiesta House is a Filipino Restaurant that serves its customers its 
+                finest Filipino foods. Fiesta House focuses on serving customers 
+                through its physical restaurant and their website where you can 
+                order food through it. Fiesta House as a rookie Filipino Restaurant 
+                will provide customers with cultural gentrification. Filipino cuisine 
+                is known for its savory taste and appetizing aroma. Ironically, Filipino 
+                cuisine draws inspiration from several influences such as Spanish, 
+                Japanese, Chinese and Western flavors, where it originated from years 
+                of colonization. Filipino cuisine is indeed flavorful, with veggies, 
+                meat, seafood and even with their traditional sweet desserts. Its rich 
+                cultural past and the richness of flavors is what makes up Filipino cuisine.
+                Filipino dishes are definitely locally-flavored-thoroughly infused with 
+                our very own flavors, they leave your taste buds tingling. Fiesta House 
+                offers it all! You can taste Filipino Food from its comfort food to its 
+                traditional one.
+                </p>
+            </div>
+            <div class="col-2">
+                <br>
+                <h1>Our Vision</h1>
+                <br>
+                <p>Fiesta House’s primary aim is to be one of the leading quality 
+                service and product providers. Accomplishing the same requires 
+                Fiesta House to focus on the following key factors: Ensuring the 
+                supply of services and products of high quality. Make sure that 
+                customers are being provided with value. It also needs to employ 
+                resources in building an excellent customer experience.
+                <br>
+            </div>
+            <div class="col-2">
+                <br>
+                <h1>Our Mission</h1>
+                <br>
+                <p>The company’s mission is to offer a unique comfort and memorable gourmet dining experience 
+                through a family oriented and intimate atmosphere. We also work towards providing the best 
+                customer and website service to all of our customers, making sure that everybody leaves 
+                with healthy stomachs and healthy hearts. It is also the goal of the restaurant to be 
+                one of the leading restaurants in the Philippines and to expand further to different 
+                locations, as more and more customers are recognizing our restaurant brand.</p>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-------- footer -------->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/playstore.PNG">
+                    <img src="images/appstore.PNG">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/fhblack.PNG">
+                <p>Our purpose is to make sure that we give you the best service and 
+                    the Filipino food of the best quality. We also work towards providing 
+                    the best customer and website service to all of our customers, making sure that 
+                    everybody leaves with healthy stomachs and happy hearts. 
+                    </p>
+            </div>
+            <div class="footer-col-3">
+                <ul>
+                <h3>Useful Links</h3>
+                <li><a href="promo.html">Promos</a></li>
+                <li><a href="contact.html">Customer Care</a></li>
+                <li><a href="tc.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <ul>
+                <h3>Stay Connected</h3>
+                <li><a href="https://facebook.com/fiestahouseph">Facebook</a></li>
+                <li><a href="https://twitter.com/fiestahouseph">Twitter</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="https://youtube.com/channel/UC37AGb8ZIBe5YhbGHy-Cwiw">YouTube</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Fiesta House</p>
+        </div>
+    </div>
+</div>
+<!----------js for toggle menu-------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+</body>
+</html>

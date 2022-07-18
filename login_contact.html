@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Contact Us | Fiesta House</title>
+    <link rel="icon" type="images/png" href="images/favicon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="contactstyle.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="body">
+<!--Header-->  
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/fiesta house.png" width="200px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="login_index.html">Home</a></li>
+                    <li><a href="login_menu.html">Menu</a></li>
+                    <li><a href="login_about.html">About</a></li>
+                    <li><a href="login_contact.html">Contact</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/bag.jpg" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+    </div>
+</div>
+<!--Account Page-->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <h3>How can we help you?</h3>
+                    </div>
+                        <hr id="Indicator">
+                        <form id="ContactForm">
+                            <input type="text" class="field" placeholder="Full Name">
+                            <input type="email" class="field" placeholder="Email">
+                            <input type="text" class="field" placeholder="Phone Number">
+                            <textarea class="field" placeholder="Message"></textarea>
+                            <button type="submit" class="btn">SUBMIT</button>
+                        </form>
+                </div>
+            </div>
+            <div class="col-3">
+                <h3>Contact Details</h3>
+                <p>feedback@fh.com.ph</p>
+                <h5>By sending your feedback and information <br>to feedback@fh.com.ph,
+                you agree to our <br> <a href="ccprivacy.html"> Customer Care Privacy Policy.</a>
+                </h5>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--Footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/playstore.PNG">
+                    <img src="images/appstore.PNG">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/fhblack.PNG">
+                <p>Our purpose is to make sure that we give you the best service and 
+                    the Filipino food of the best quality. We also work towards providing 
+                    the best customer and website service to all of our customers, making sure that 
+                    everybody leaves with healthy stomachs and happy hearts. 
+                    </p>
+            </div>
+            <div class="footer-col-3">
+                <ul>
+                <h3>Useful Links</h3>
+                <li><a href="promo.html">Promos</a></li>
+                <li><a href="contact.html">Customer Care</a></li>
+                <li><a href="tc.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <ul>
+                <h3>Stay Connected</h3>
+                <li><a href="https://facebook.com/fiestahouseph">Facebook</a></li>
+                <li><a href="https://twitter.com/fiestahouseph">Twitter</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="https://youtube.com/channel/UC37AGb8ZIBe5YhbGHy-Cwiw">YouTube</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Fiesta House</p>
+        </div>
+    </div>
+</div>
+<!--js for toggle menu-->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+</body>
+</html>

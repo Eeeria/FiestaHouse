@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Sign In | Fiesta House</title>
+    <link rel="icon" type="images/png" href="images/favicon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="accountstyle.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="body">
+<!--Header-->    
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/fiesta house.png" width="200px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/bag.jpg" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+    </div>
+</div>
+<!--Sign In-->
+<div id="login-box">
+    <div class="left">
+      <h1 id="status">Sign In</h1>
+      <input type="text" id="email" name="email" placeholder="E-mail" />
+      <input type="password" id="password" name="password" placeholder="Password" />
+      
+      <input type="submit" id="logIn" name="login_submit" value="Signin" /></a>
+  
+    </div>
+    
+    <div class="right">
+      <span class="loginwith">Sign in with<br />social network</span>
+      
+      <button class="social-signin facebook">Sign in with facebook</button>
+      <button class="social-signin twitter">Sign in with Twitter</button>
+      <button class="social-signin google">Sign in with Google+</button>
+      <p>Don't have an account?<a href="account_signup.html"> Sign Up</a></p> 
+    </div>
+    <div class="or">OR</div>
+</div>
+</div>
+<!--Footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/playstore.PNG">
+                    <img src="images/appstore.PNG">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/fhblack.PNG">
+                <p>Our purpose is to make sure that we give you the best service and 
+                    the Filipino food of the best quality. We also work towards providing 
+                    the best customer and website service to all of our customers, making sure that 
+                    everybody leaves with healthy stomachs and happy hearts. 
+                    </p>
+            </div>
+            <div class="footer-col-3">
+                <ul>
+                <h3>Useful Links</h3>
+                <li><a href="promo.html">Promos</a></li>
+                <li><a href="contact.html">Customer Care</a></li>
+                <li><a href="tc.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <ul>
+                <h3>Stay Connected</h3>
+                <li><a href="https://facebook.com/fiestahouseph">Facebook</a></li>
+                <li><a href="https://twitter.com/fiestahouseph">Twitter</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="https://youtube.com/channel/UC37AGb8ZIBe5YhbGHy-Cwiw">YouTube</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Fiesta House</p>
+        </div>
+    </div>
+</div>
+<!----------js for toggle menu-------->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+    import { getDatabase, ref, update} from "https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js";
+
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDRFS4L4EVBR7UkPVWxBpJjOQNgtlz3eL0",
+      authDomain: "website-account-database.firebaseapp.com",
+      databaseURL: "https://website-account-database-default-rtdb.firebaseio.com",
+      projectId: "website-account-database",
+      storageBucket: "website-account-database.appspot.com",
+      messagingSenderId: "371588843758",
+      appId: "1:371588843758:web:134df9108163f0889ccbff",
+      measurementId: "G-YQ2GZM4Y5F"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth(app);
+
+    logIn.addEventListener('click',(e) => {
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+             // Signed in 
+                 const user = userCredential.user;
+
+                 const dt = new Date();
+                 update(ref(database, 'users/' + user.uid),{
+                    last_login: dt, 
+                 })
+
+                 alert('User Logged in');
+                 window.location.href = "login_index.html";
+             // ...
+         })
+             .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+                alert(errorMessage);
+             });
+    })
+
+    const user = auth.currentUser;
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+             const uid = user.uid;
+             // ...
+         } else {
+             // User is signed out
+             // ...
+             }
+    });
+
+    logout.addEventListener('click',(e) => { 
+        signOut(auth).then(() => {
+            // Sign-out successful.
+        }).catch((error) => {
+            // An error happened.
+        });  
+    })         
+
+  </script>
+
+
+</html>

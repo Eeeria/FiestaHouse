@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Checkout | Fiesta House</title>
+    <link rel="icon" type="images/png" href="images/favicon.jpg" sizes="32x32">
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://fonts.googleapis.com/css2?
+    family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-----header------>  
+<div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/fiesta house.png" width="200px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            <a href="cart.html"><img src="images/bag.jpg" width="30px" height="30px"></a>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        
+        </div>
+    </div>
+<!-----checkout------>
+<div class="checkout">
+<div class="row">
+    <div class="col-75">
+      <div class="container">
+          <div class="row">
+            <div class="col-50">
+                <br>
+              <h3>Billing Address</h3>
+              <br>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Juan S. Dela Cruz">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="email" name="email" placeholder="juandelacruz@example.com">
+              <label for="adr"><i class="fa fa-address-card-o"></i> House No., Street</label>
+              <input type="text" id="adr" name="address" placeholder="#27 San Miguel Avenue">
+              <label for="adr"><i class="fa fa-address-card"></i> Building, Barangay</label>
+              <input type="text" id="adr" name="address" placeholder="Ortigas Center, Brgy. San Antonio">
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" name="city" placeholder="Pasig City">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">Postal Code</label>
+                  <input type="text" id="state" name="state" placeholder="1605">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Phone Number</label>
+                  <input type="text" id="zip" name="zip" placeholder="+639876543210">
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3>Payment</h3>
+              <p>Select Mode of Payment</p>
+              <label><input type="checkbox"  name="cod"> Cash-on-delivery</label>
+              <label for="fname"><input type="checkbox" name="bank"> Bank Account / Card</label>
+              <h4>Accepted Banks / Cards:</h4>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i>
+                <i class="fa fa-cc-paypal" style="color:blue;"></i>
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              </div>
+              <p>• Banco de Oro (BDO)</p>
+              <p>• Bank of the Philippine Islands (BPI)</p>
+              <p>• Philippine National Bank (PNB)</p>
+              <br>
+              <p>Note: Don't fill out if you have selected Cash-on-delivery</p>
+              <br>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="Juan S. Dela Cruz">
+              <label for="ccnum">Bank / Card Number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Exp Month & Year</label>
+              <input type="text" id="expmonthyear" name="expmonthyear" placeholder="September 2022">
+            </div>
+          </div>
+          <label>
+            <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+          </label>
+          <button class="btn" onclick="openPopup()">Check Out</button>
+            <div class="popup" id="popup">
+                <img src="images/confirm.png">
+                <br>
+                <h2>Order Successful</h2>
+                <p>Your order has been placed.</p>
+                <p>You'll receive an email confirmation shortly.</p>
+                <br>
+                <p>Order ID: <b>0021</b></p>
+                <a href="login_tracker.html"><button type="button" onclick="closePopup()">Track Order</button></a>
+            </div>
+            
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+                let popup = document.getElementById("popup");
+                function openPopup(){
+                    popup.classList.add("open-popup")
+                }
+                function closePopup(){
+                    popup.classList.remove("open-popup")
+                }
+            </script>
+<!-----footer------>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and ios mobile phone</p>
+                <div class="app-logo">
+                    <img src="images/playstore.PNG">
+                    <img src="images/appstore.PNG">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/fhblack.PNG">
+                <p>Our purpose is to make sure that we give you the best service and 
+                    the Filipino food of the best quality. We also work towards providing 
+                    the best customer and website service to all of our customers, making sure that 
+                    everybody leaves with healthy stomachs and happy hearts. 
+                    </p>
+            </div>
+            <div class="footer-col-3">
+                <ul>
+                <h3>Useful Links</h3>
+                <li><a href="promo.html">Promos</a></li>
+                <li><a href="contact.html">Customer Care</a></li>
+                <li><a href="tc.html">Terms & Conditions</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <ul>
+                <h3>Stay Connected</h3>
+                <li><a href="https://facebook.com/fiestahouseph">Facebook</a></li>
+                <li><a href="https://twitter.com/fiestahouseph">Twitter</a></li>
+                <li><a href="">Instagram</a></li>
+                <li><a href="https://youtube.com/channel/UC37AGb8ZIBe5YhbGHy-Cwiw">YouTube</a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2022 - Fiesta House</p>
+        </div>
+    </div>
+</div>
+<!-----js for toggle menu------>
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+    }
+</script>
+
+</body>
+</html>
